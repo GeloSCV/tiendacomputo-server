@@ -28,7 +28,7 @@ const postProduct= async (req, res)=>{
 const sumitTicket= async (req, res)=>{
     try {   
         const { name , email , description}=req.body
-        const result= await pool.query("INSERT INTO ticket (name , email , description) VALUES ($1,$2,$3) RETURNING *", [
+        const result= await pool.query("INSERT INTO ticketsubmit (name , email , description) VALUES ($1,$2,$3) RETURNING *", [
             name,
             email,
             description
